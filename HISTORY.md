@@ -6,14 +6,17 @@
 - [#262] - Improve support for build scripts that use npm config variables. ([@zkochan])
 - [#265] - Respect configuration from `.npmrc`. ([@zkochan])
 - [#6] - Use junctions on Windows. ([#269], [@zkochan])
+- [#144] - Uninstall support. ([#268], [@zkochan])
 
 [#6]: https://github.com/rstacruz/pnpm/issues/6
 [#21]: https://github.com/rstacruz/pnpm/issues/21
+[#144]: https://github.com/rstacruz/pnpm/issues/144
 [#257]: https://github.com/rstacruz/pnpm/issues/257
 [#258]: https://github.com/rstacruz/pnpm/issues/258
 [#259]: https://github.com/rstacruz/pnpm/issues/259
 [#262]: https://github.com/rstacruz/pnpm/issues/262
 [#265]: https://github.com/rstacruz/pnpm/issues/265
+[#268]: https://github.com/rstacruz/pnpm/issues/268
 [#269]: https://github.com/rstacruz/pnpm/issues/269
 [v0.25.0]: https://github.com/rstacruz/pnpm/compare/v0.24.0...v0.25.0
 
