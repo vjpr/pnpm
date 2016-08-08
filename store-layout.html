@@ -30,6 +30,7 @@ To illustrate, an installation of <a href="https://github.com/chalk/chalk">chalk
 <pre><code>.
 &#x2514;&#x2500; node_modules/
    &#x251C;&#x2500; .store/
+   |  &#x251C;&#x2500; store.json
    &#x2502;  &#x251C;&#x2500; chalk@1.1.1/_/
    &#x2502;  &#x2502;  &#x2514;&#x2500; node_modules/
    &#x2502;  &#x2502;     &#x251C;&#x2500; ansi-styles      -&gt; ../../../ansi-styles@2.1.0/_
@@ -41,11 +42,13 @@ To illustrate, an installation of <a href="https://github.com/chalk/chalk">chalk
    &#x2514;&#x2500; chalk                     -&gt; .store/chalk@1.1.1/_
 </code></pre>
 <p>The intermediate <code>_</code> directories are needed to hide <code>node_modules</code> from npm utilities like <code>npm ls</code>, <code>npm prune</code>, <code>npm shrinkwrap</code> and so on. The name <code>_</code> is chosen because it helps make stack traces readable.</p>
+<p><a href="store-json.html">store.json</a> contains information about all the different internal/external dependencies that the packages in the store have.</p>
 <h2 id="peer-dependencies">Peer dependencies</h2>
 <p>Symlinks to deep dependencies are stored in <code>node_modules/.store/node_modules</code>, in addition to the diagram above. It looks something like this:</p>
 <pre><code>.
 &#x2514;&#x2500; node_modules/
    &#x251C;&#x2500; .store/
+   |  &#x251C;&#x2500; store.json
    &#x2502;  &#x251C;&#x2500; chalk@1.1.1/_/
    &#x2502;  &#x251C;&#x2500; ansi-styles@2.1.0/_/
    &#x2502;  &#x251C;&#x2500; has-ansi@2.0.0/_/
@@ -86,6 +89,12 @@ To illustrate, an installation of <a href="https://github.com/chalk/chalk">chalk
                 <li class="menu-item -level-2"><a href="vs-npm.html" class="link title  link-vs-npm">npm</a>
                 </li>
                 <li class="menu-item -level-2"><a href="vs-ied.html" class="link title  link-vs-ied">ied</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Advanced</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="store-json.html" class="link title  link-store-json">store.json</a>
                 </li>
               </ul>
             </li>

@@ -117,6 +117,29 @@
             "slug": "vs-ied"
           }
         ]
+      },
+      {
+        "title": "Advanced",
+        "sections": [
+          {
+            "title": "store.json",
+            "source": "docs/store-json.md",
+            "url": "store-json.html",
+            "slug": "store-json",
+            "headings": [
+              {
+                "title": "dependents",
+                "depth": 2,
+                "id": "dependents"
+              },
+              {
+                "title": "dependencies",
+                "depth": 2,
+                "id": "dependencies"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -221,6 +244,23 @@
       "source": "docs/vs-ied.md",
       "title": "ied",
       "slug": "vs-ied"
+    },
+    "store-json.html": {
+      "source": "docs/store-json.md",
+      "title": "store.json",
+      "slug": "store-json",
+      "headings": [
+        {
+          "title": "dependents",
+          "depth": 2,
+          "id": "dependents"
+        },
+        {
+          "title": "dependencies",
+          "depth": 2,
+          "id": "dependencies"
+        }
+      ]
     }
   },
   "sources": {
@@ -230,6 +270,7 @@
     "docs/roadmap.md": "roadmap.html",
     "docs/vs-npm.md": "vs-npm.html",
     "docs/vs-ied.md": "vs-ied.html",
+    "docs/store-json.md": "store-json.html",
     "docs/docpress.json": "docpress.json",
     "docs/images/screencast.gif": "images/screencast.gif"
   }
