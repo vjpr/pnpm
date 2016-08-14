@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=2bcc4b59"></script>
-    <title>Custom registries</title>
+    <title>Global install</title>
     <meta name="viewport" content="width=device-width">
     <script>
       if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
@@ -17,29 +17,20 @@
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-custom-registries">
+      <div class="body page-global-install">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="custom-registries">Custom registries</h1>
-<p>pnpm follows whatever is configured as npm registries. To use a custom registry, use <code>npm config</code>:</p>
-<pre><code class="lang-sh"><span class="pl-c"># updates ~/.npmrc</span>
-npm config <span class="pl-c1">set</span> registry http://npmjs.eu
-</code></pre>
-<p>Or to use it for just one command, use environment variables:</p>
-<pre><code>env npm_registry=http://npmjs.eu pnpm install
-</code></pre>
-<p>Private registries are supported, as well.</p>
-<pre><code class="lang-sh">npm config <span class="pl-c1">set</span> @mycompany:registry https://npm.mycompany.com
-pnpm install @mycompany/foo
-</code></pre>
+        <div class="markdown-body"><h1 id="global-install">Global install</h1>
+<p><code>pnpm</code> uses a &#x201C;global package&#x201D; to install the global dependencies. The global package is situated at <code>~/.pnpm</code>.
+In order to use globally installed packages as executables, you can add <code>~/.pnpm/node_modules/.bin</code> to your <code>PATH</code>.</p>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="index.html"><span class="title">pnpm</span></a></div>
-          <div class="right"><a href="store-layout.html"><span class="label">Next: </span><span class="title">Store layout</span></a></div>
+          <div class="left"><a href="store-layout.html"><span class="title">Store layout</span></a></div>
+          <div class="right"><a href="roadmap.html"><span class="label">Next: </span><span class="title">Roadmap</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -49,11 +40,11 @@ pnpm install @mycompany/foo
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Features</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a href="custom-registries.html" class="link title -active link-custom-registries">Custom registries</a>
+                <li class="menu-item -level-2"><a href="custom-registries.html" class="link title  link-custom-registries">Custom registries</a>
                 </li>
                 <li class="menu-item -level-2"><a href="store-layout.html" class="link title  link-store-layout">Store layout</a>
                 </li>
-                <li class="menu-item -level-2"><a href="global-install.html" class="link title  link-global-install">Global install</a>
+                <li class="menu-item -level-2"><a href="global-install.html" class="link title -active link-global-install">Global install</a>
                 </li>
                 <li class="menu-item -level-2"><a href="roadmap.html" class="link title  link-roadmap">Roadmap</a>
                 </li>

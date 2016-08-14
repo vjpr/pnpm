@@ -67,6 +67,12 @@
             ]
           },
           {
+            "title": "Global install",
+            "source": "docs/global-install.md",
+            "url": "global-install.html",
+            "slug": "global-install"
+          },
+          {
             "title": "Roadmap",
             "source": "docs/roadmap.md",
             "url": "roadmap.html",
@@ -203,6 +209,11 @@
         }
       ]
     },
+    "global-install.html": {
+      "source": "docs/global-install.md",
+      "title": "Global install",
+      "slug": "global-install"
+    },
     "roadmap.html": {
       "source": "docs/roadmap.md",
       "title": "Roadmap",
@@ -267,6 +278,7 @@
     "README.md": "index.html",
     "docs/custom-registries.md": "custom-registries.html",
     "docs/store-layout.md": "store-layout.html",
+    "docs/global-install.md": "global-install.html",
     "docs/roadmap.md": "roadmap.html",
     "docs/vs-npm.md": "vs-npm.html",
     "docs/vs-ied.md": "vs-ied.html",
