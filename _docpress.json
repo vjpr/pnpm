@@ -45,7 +45,27 @@
         ]
       },
       {
-        "title": "API"
+        "title": "API",
+        "source": "docs/api.md",
+        "url": "api.html",
+        "slug": "api",
+        "headings": [
+          {
+            "title": "`pnpm.install(pkgsToInstall, [options])`",
+            "depth": 2,
+            "id": "pnpm.install(pkgstoinstall-options)"
+          },
+          {
+            "title": "`pnpm.installPkgDeps([options])`",
+            "depth": 2,
+            "id": "pnpm.installpkgdeps(options)"
+          },
+          {
+            "title": "`pnpm.uninstall(pkgsToUninstall, [options])`",
+            "depth": 2,
+            "id": "pnpm.uninstall(pkgstouninstall-options)"
+          }
+        ]
       },
       {
         "title": "Features",
@@ -195,6 +215,28 @@
         }
       ]
     },
+    "api.html": {
+      "source": "docs/api.md",
+      "title": "API",
+      "slug": "api",
+      "headings": [
+        {
+          "title": "`pnpm.install(pkgsToInstall, [options])`",
+          "depth": 2,
+          "id": "pnpm.install(pkgstoinstall-options)"
+        },
+        {
+          "title": "`pnpm.installPkgDeps([options])`",
+          "depth": 2,
+          "id": "pnpm.installpkgdeps(options)"
+        },
+        {
+          "title": "`pnpm.uninstall(pkgsToUninstall, [options])`",
+          "depth": 2,
+          "id": "pnpm.uninstall(pkgstouninstall-options)"
+        }
+      ]
+    },
     "custom-registries.html": {
       "source": "docs/custom-registries.md",
       "title": "Custom registries",
@@ -279,6 +321,7 @@
   },
   "sources": {
     "README.md": "index.html",
+    "docs/api.md": "api.html",
     "docs/custom-registries.md": "custom-registries.html",
     "docs/store-layout.md": "store-layout.html",
     "docs/global-install.md": "global-install.html",

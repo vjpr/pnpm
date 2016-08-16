@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>API</title>
+    <meta name="viewport" content="width=device-width">
+    <script>
+      if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"UA-20473929-1",'auto')
+      }
+    </script>
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-api">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="api">API</h1>
+<h2 id="pnpm.install(pkgstoinstall-options)"><code>pnpm.install(pkgsToInstall, [options])</code></h2>
+<p>Install packages.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>pkgsToInstall</code> - <em>Object | String[]</em> - either an object that maps package names to version ranges or inputs usually passed to <code>npm install</code> (e.g., <code>foo@1.0.0</code>, <code>foo</code>).</li>
+<li><code>options.save</code> - <em>Boolean</em> - package will appear in <code>dependencies</code>.</li>
+<li><code>options.saveDev</code> - <em>Boolean</em> - package will appear in <code>devDependencies</code>.</li>
+<li><code>options.saveOptional</code> - <em>Boolean</em> - package will appear in <code>optionalDependencies</code>.</li>
+<li><code>options.saveExact</code> - <em>Boolean</em> - saved dependencies will be configured with an exact version rather than using npm&#x2019;s default semver range operator.</li>
+<li><code>options.global</code> - <em>Boolean</em> - the packages will be installed globally rather than locally.</li>
+<li><code>options.cwd</code> - <em>String</em> - the directory in which the installation will be performed. By default the <code>process.cwd()</code> value is used.</li>
+<li><code>options.quiet</code> - <em>Boolean</em> - <code>false</code> by default. No output to the console.</li>
+</ul>
+<p><strong>Returns:</strong> a Promise</p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-js"><span class="pl-k">const</span> pnpm = <span class="pl-c1">require</span>(<span class="pl-s">&apos;pnpm&apos;</span>)
+
+pnpm.install({
+  <span class="pl-s">&apos;is-positive&apos;</span>: <span class="pl-s">&apos;1.0.0&apos;</span>,
+  <span class="pl-s">&apos;hello-world&apos;</span>: <span class="pl-s">&apos;^2.3.1&apos;</span>
+}, { save: <span class="pl-c1">true</span>, quiet: <span class="pl-c1">true</span> })
+</code></pre>
+<h2 id="pnpm.installpkgdeps(options)"><code>pnpm.installPkgDeps([options])</code></h2>
+<p>Install all modules listed as dependencies in <code>package.json</code>.</p>
+<p><strong>Arguments:</strong> (same as in named install and additionally)</p>
+<ul>
+<li><code>options.production</code> - <em>Boolean</em> - <code>false</code> by default or <code>true</code> when the <code>NODE_ENV</code> environment variable is set to <code>production</code>. Modules listed in <code>devDependencies</code> will not be installed.</li>
+</ul>
+<h2 id="pnpm.uninstall(pkgstouninstall-options)"><code>pnpm.uninstall(pkgsToUninstall, [options])</code></h2>
+<p>Uninstalls a package, completely removing everything pnpm installed on its behalf.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>pkgsToUninstall</code> - <em>String[]</em> - the package names to be uninstalled.</li>
+<li><code>options.save</code> - <em>Boolean</em> - the package will be removed from <code>dependencies</code>.</li>
+<li><code>options.saveDev</code> - <em>Boolean</em> - the package will be removed from <code>devDependencies</code>.</li>
+<li><code>options.saveOptional</code> - <em>Boolean</em> - the package will be removed from <code>optionalDependencies</code>.</li>
+<li><code>options.global</code> - <em>Boolean</em> - the packages will be uninstalled globally.</li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="index.html"><span class="title">pnpm</span></a></div>
+          <div class="right"><a href="custom-registries.html"><span class="label">Next: </span><span class="title">Custom registries</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">pnpm</a>
+            </li>
+            <li class="menu-item -level-1"><a href="api.html" class="link title -active link-api">API</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a href="#pnpm.install(pkgstoinstall-options)" class="hlink link-pnpm.install(pkgstoinstall-options)">`pnpm.install(pkgsToInstall, [options])`</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#pnpm.installpkgdeps(options)" class="hlink link-pnpm.installpkgdeps(options)">`pnpm.installPkgDeps([options])`</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#pnpm.uninstall(pkgstouninstall-options)" class="hlink link-pnpm.uninstall(pkgstouninstall-options)">`pnpm.uninstall(pkgsToUninstall, [options])`</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Features</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="custom-registries.html" class="link title  link-custom-registries">Custom registries</a>
+                </li>
+                <li class="menu-item -level-2"><a href="store-layout.html" class="link title  link-store-layout">Store layout</a>
+                </li>
+                <li class="menu-item -level-2"><a href="global-install.html" class="link title  link-global-install">Global install</a>
+                </li>
+                <li class="menu-item -level-2"><a href="roadmap.html" class="link title  link-roadmap">Roadmap</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Comparison</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="vs-npm.html" class="link title  link-vs-npm">npm</a>
+                </li>
+                <li class="menu-item -level-2"><a href="vs-ied.html" class="link title  link-vs-ied">ied</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Advanced</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="store-json.html" class="link title  link-store-json">store.json</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
