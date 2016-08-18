@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=2bcc4b59"></script>
-    <title>store.json</title>
+    <title>Shared store</title>
     <meta name="viewport" content="width=device-width">
     <script>
       if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
@@ -17,47 +17,24 @@
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-store-json">
+      <div class="body page-shared-store">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="store.json">store.json</h1>
-<p><code>store.json</code> contains information about all the different internal/external dependencies that the packages in the store have. This is especially useful because <code>pnpm</code> allows to use shared stores.</p>
-<h2 id="dependents">dependents</h2>
-<p>A dictionary that shows what packages are dependent on each of the package from the store. The dependent packages can be other packages from the store, or packages that use the store to install their dependencies.</p>
-<p>For example, <code>pnpm</code> has a dependency on <code>npm</code> and <code>semver</code>. But <code>semver</code> is also a dependency of <code>npm</code>. It means that after installation, the <code>store.json</code> would have connections like this in the <code>dependents</code> property:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">&quot;dependents&quot;</span>: {
-    <span class="hljs-attr">&quot;semver@5.3.0&quot;</span>: [
-      <span class="pl-s">&quot;/home/john_smith/src/pnpm/package.json&quot;</span>,
-      <span class="pl-s">&quot;npm@3.10.2&quot;</span>
-    ],
-    <span class="hljs-attr">&quot;npm@3.10.2&quot;</span>: [
-      <span class="pl-s">&quot;/home/john_smith/src/pnpm/package.json&quot;</span>
-    ]
-  }
-}
+        <div class="markdown-body"><h1 id="shared-store">Shared store</h1>
+<p><strong>Disclaimer!</strong> This will work only on Node.js &gt;= v6.3.0, because it uses the <code>--preserve-symlinks</code> option (read more about it: nodejs/node#3402).</p>
+<p>By default, <code>pnpm</code> creates a separate store for every package in it&#x2019;s <code>node_modules</code> folder. However, it is possible to change the value of the <code>store_path</code> config key and force <code>pnpm</code> to use a shared storage.</p>
+<p>The easiest way to do it is via the command line:</p>
+<pre><code class="lang-sh">pnpm config <span class="pl-c1">set</span> store_path ~/.store
 </code></pre>
-<h2 id="dependencies">dependencies</h2>
-<p>A dictionary that is pretty match the opposite of <code>dependents</code>. The <code>store.json</code> from the previous example would contain the following <code>dependencies</code> property:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">&quot;dependencies&quot;</span>: {
-    <span class="hljs-attr">&quot;/home/john_smith/src/pnpm/package.json&quot;</span>: [
-      <span class="pl-s">&quot;semver@5.3.0&quot;</span>,
-      <span class="pl-s">&quot;npm@3.10.2&quot;</span>
-    ],
-    <span class="hljs-attr">&quot;npm@3.10.2&quot;</span>: [
-      <span class="pl-s">&quot;semver@5.3.0&quot;</span>
-    ]
-  }
-}
-</code></pre>
+<p>A shared storage can save tons of space!</p>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="vs-ied.html"><span class="title">ied</span></a></div>
+          <div class="left"><a href="global-install.html"><span class="title">Global install</span></a></div>
+          <div class="right"><a href="roadmap.html"><span class="label">Next: </span><span class="title">Roadmap</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -75,7 +52,7 @@
                 </li>
                 <li class="menu-item -level-2"><a href="global-install.html" class="link title  link-global-install">Global install</a>
                 </li>
-                <li class="menu-item -level-2"><a href="shared-store.html" class="link title  link-shared-store">Shared store</a>
+                <li class="menu-item -level-2"><a href="shared-store.html" class="link title -active link-shared-store">Shared store</a>
                 </li>
                 <li class="menu-item -level-2"><a href="roadmap.html" class="link title  link-roadmap">Roadmap</a>
                 </li>
@@ -91,13 +68,7 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Advanced</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a href="store-json.html" class="link title -active link-store-json">store.json</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#dependents" class="hlink link-dependents">dependents</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#dependencies" class="hlink link-dependencies">dependencies</a>
-                    </li>
-                  </ul>
+                <li class="menu-item -level-2"><a href="store-json.html" class="link title  link-store-json">store.json</a>
                 </li>
               </ul>
             </li>

@@ -96,6 +96,12 @@
             "slug": "global-install"
           },
           {
+            "title": "Shared store",
+            "source": "docs/shared-store.md",
+            "url": "shared-store.html",
+            "slug": "shared-store"
+          },
+          {
             "title": "Roadmap",
             "source": "docs/roadmap.md",
             "url": "roadmap.html",
@@ -259,6 +265,11 @@
       "title": "Global install",
       "slug": "global-install"
     },
+    "shared-store.html": {
+      "source": "docs/shared-store.md",
+      "title": "Shared store",
+      "slug": "shared-store"
+    },
     "roadmap.html": {
       "source": "docs/roadmap.md",
       "title": "Roadmap",
@@ -325,6 +336,7 @@
     "docs/custom-registries.md": "custom-registries.html",
     "docs/store-layout.md": "store-layout.html",
     "docs/global-install.md": "global-install.html",
+    "docs/shared-store.md": "shared-store.html",
     "docs/roadmap.md": "roadmap.html",
     "docs/vs-npm.md": "vs-npm.html",
     "docs/vs-ied.md": "vs-ied.html",
