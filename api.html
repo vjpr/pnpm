@@ -62,6 +62,23 @@ pnpm.install({
 <li><code>options.saveOptional</code> - <em>Boolean</em> - the package will be removed from <code>optionalDependencies</code>.</li>
 <li><code>options.global</code> - <em>Boolean</em> - the packages will be uninstalled globally.</li>
 </ul>
+<h2 id="pnpm.linkfromrelative(lintto-options)"><code>pnpm.linkFromRelative(lintTo, [options])</code></h2>
+<p>Create a symbolic link from the linked package to the current working directory&#x2019;s <code>node_modules</code> (and to the <code>node_modules/.bin</code>).</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>options.cwd</code> - <em>String</em> - by default <code>process.cwd()</code>.</li>
+</ul>
+<h2 id="pnpm.linktoglobal(options)"><code>pnpm.linkToGlobal([options])</code></h2>
+<p>Create a symbolic link from the package in the current working directory to the global <code>node_modules</code>.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>options.cwd</code> - <em>String</em> - by default <code>process.cwd()</code>.</li>
+</ul>
+<h2 id="pnpm.linkfromglobal(pkgname-options)"><code>pnpm.linkFromGlobal(pkgName, [options])</code></h2>
+<p>Create a symbolic link to the specified package from the global <code>node_modules</code> to the current working directory&#x2019;s <code>node_modules</code>.</p>
+<ul>
+<li><code>options.cwd</code> - <em>String</em> - by default <code>process.cwd()</code>.</li>
+</ul>
 
         </div>
         <div class="footer-nav">
@@ -81,6 +98,12 @@ pnpm.install({
                 <li class="heading-item -depth-2"><a href="#pnpm.installpkgdeps(options)" class="hlink link-pnpm.installpkgdeps(options)">`pnpm.installPkgDeps([options])`</a>
                 </li>
                 <li class="heading-item -depth-2"><a href="#pnpm.uninstall(pkgstouninstall-options)" class="hlink link-pnpm.uninstall(pkgstouninstall-options)">`pnpm.uninstall(pkgsToUninstall, [options])`</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#pnpm.linkfromrelative(lintto-options)" class="hlink link-pnpm.linkfromrelative(lintto-options)">`pnpm.linkFromRelative(lintTo, [options])`</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#pnpm.linktoglobal(options)" class="hlink link-pnpm.linktoglobal(options)">`pnpm.linkToGlobal([options])`</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#pnpm.linkfromglobal(pkgname-options)" class="hlink link-pnpm.linkfromglobal(pkgname-options)">`pnpm.linkFromGlobal(pkgName, [options])`</a>
                 </li>
               </ul>
             </li>

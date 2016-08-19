@@ -64,6 +64,21 @@
             "title": "`pnpm.uninstall(pkgsToUninstall, [options])`",
             "depth": 2,
             "id": "pnpm.uninstall(pkgstouninstall-options)"
+          },
+          {
+            "title": "`pnpm.linkFromRelative(lintTo, [options])`",
+            "depth": 2,
+            "id": "pnpm.linkfromrelative(lintto-options)"
+          },
+          {
+            "title": "`pnpm.linkToGlobal([options])`",
+            "depth": 2,
+            "id": "pnpm.linktoglobal(options)"
+          },
+          {
+            "title": "`pnpm.linkFromGlobal(pkgName, [options])`",
+            "depth": 2,
+            "id": "pnpm.linkfromglobal(pkgname-options)"
           }
         ]
       },
@@ -240,6 +255,21 @@
           "title": "`pnpm.uninstall(pkgsToUninstall, [options])`",
           "depth": 2,
           "id": "pnpm.uninstall(pkgstouninstall-options)"
+        },
+        {
+          "title": "`pnpm.linkFromRelative(lintTo, [options])`",
+          "depth": 2,
+          "id": "pnpm.linkfromrelative(lintto-options)"
+        },
+        {
+          "title": "`pnpm.linkToGlobal([options])`",
+          "depth": 2,
+          "id": "pnpm.linktoglobal(options)"
+        },
+        {
+          "title": "`pnpm.linkFromGlobal(pkgName, [options])`",
+          "depth": 2,
+          "id": "pnpm.linkfromglobal(pkgname-options)"
         }
       ]
     },
