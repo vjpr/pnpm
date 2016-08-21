@@ -7,7 +7,7 @@ cache:
     - node_modules
 sudo: false
 before_install:
-  - npm install -g pnpm
+  - npm install -g @zkochan/pnpm@next
 install:
   - pnpm install --quiet
 script:
