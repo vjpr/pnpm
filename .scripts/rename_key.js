@@ -13,7 +13,7 @@ module.exports = opts => {
     if (keys[i] === 'scripts') {
       newPkgJSON.scripts = pkgJSON.scripts
       if (opts.pkgName === 'pnpm-rocket') {
-        newPkgJSON.scripts.preinstall = 'node .scripts/try_rename cached_node_modules node_modules'
+        newPkgJSON.scripts.preinstall = 'node .scripts/rename cached_node_modules node_modules'
         continue
       }
       delete newPkgJSON.scripts.preinstall
