@@ -178,6 +178,11 @@
             "slug": "store-json",
             "headings": [
               {
+                "title": "pnpm",
+                "depth": 2,
+                "id": "pnpm"
+              },
+              {
                 "title": "dependents",
                 "depth": 2,
                 "id": "dependents"
@@ -347,6 +352,11 @@
       "title": "store.json",
       "slug": "store-json",
       "headings": [
+        {
+          "title": "pnpm",
+          "depth": 2,
+          "id": "pnpm"
+        },
         {
           "title": "dependents",
           "depth": 2,

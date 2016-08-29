@@ -25,6 +25,8 @@
         </div>
         <div class="markdown-body"><h1 id="store.json">store.json</h1>
 <p><code>store.json</code> contains information about all the different internal/external dependencies that the packages in the store have. This is especially useful because <code>pnpm</code> allows to use shared stores.</p>
+<h2 id="pnpm">pnpm</h2>
+<p>The last compatible pnpm version that has modified the store.</p>
 <h2 id="dependents">dependents</h2>
 <p>A dictionary that shows what packages are dependent on each of the package from the store. The dependent packages can be other packages from the store, or packages that use the store to install their dependencies.</p>
 <p>For example, <code>pnpm</code> has a dependency on <code>npm</code> and <code>semver</code>. But <code>semver</code> is also a dependency of <code>npm</code>. It means that after installation, the <code>store.json</code> would have connections like this in the <code>dependents</code> property:</p>
@@ -93,6 +95,8 @@
               <ul class="submenu">
                 <li class="menu-item -level-2"><a href="store-json.html" class="link title -active link-store-json">store.json</a>
                   <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#pnpm" class="hlink link-pnpm">pnpm</a>
+                    </li>
                     <li class="heading-item -depth-2"><a href="#dependents" class="hlink link-dependents">dependents</a>
                     </li>
                     <li class="heading-item -depth-2"><a href="#dependencies" class="hlink link-dependencies">dependencies</a>
