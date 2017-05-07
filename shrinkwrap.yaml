@@ -2,6 +2,7 @@ dependencies:
   '@types/byline@^4.2.31': 4.2.31
   '@types/common-tags@^1.2.5': 1.2.5
   '@types/load-json-file@^2.0.5': 2.0.5
+  '@types/lodash@^4.14.63': 4.14.63
   '@types/mkdirp@^0.3.29': 0.3.29
   '@types/mz@^0.0.31': 0.0.31
   '@types/node@^7.0.5': 7.0.14
@@ -39,6 +40,7 @@ dependencies:
   link-dir@^2.0.0: 2.0.0
   load-json-file@^2.0.0: 2.0.0
   load-yaml-file@^0.1.0: 0.1.0
+  lodash@^4.17.4: 4.17.4
   loud-rejection@^1.6.0: 1.6.0
   mem@^1.1.0: 1.1.0
   mkdirp-promise@^5.0.1: 5.0.1
@@ -97,6 +99,7 @@ packages:
   /@types/chalk/0.4.31: a31d74241a6b1edbb973cf36d97a2896834a51f9
   /@types/common-tags/1.2.5: 14f29893992eb325594b83d739af02f2b6520f46
   /@types/load-json-file/2.0.5: 5aded9bda57cb8b31b6af6c2c927aba395893df6
+  /@types/lodash/4.14.63: 5ac475f55bfdc62bc88c4239dbc482f2f3bead93
   /@types/mkdirp/0.3.29: 7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066
   /@types/mz/0.0.30:
     dependencies:

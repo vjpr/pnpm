@@ -56,19 +56,27 @@ export default async function (
       return pkgsToLink
     }, {})
   const topPkgIds = topPkgs.filter(pkg => pkg.isInstallable).map(pkg => pkg.id)
+  console.time('resolvePeers')
   const pkgsToLink = await resolvePeers(pkgsToLinkMap, topPkgIds, opts.topParents)
+  console.timeEnd('resolvePeers')
 
   const flatResolvedDeps =  R.values(pkgsToLink).sort((a, b) => a.depth - b.depth)
 
   const deps = <DependencyTreeNode[]>R.uniqBy(R.prop('hardlinkedLocation'), flatResolvedDeps)
 
+  console.time('linkAllPkgs')
   await linkAllPkgs(deps, opts)
+  console.timeEnd('linkAllPkgs')
 
   const depsByModules = <DependencyTreeNode[]>R.uniqBy(R.prop('modules'), flatResolvedDeps)
 
+  console.time('linkAllIndependentModules')
   await linkAllIndependentModules(depsByModules, pkgsToLink)
+  console.timeEnd('linkAllIndependentModules')
 
+  console.time('linkAllModules')
   await linkAllModules(deps, pkgsToLink)
+  console.timeEnd('linkAllModules')
 
   for (let pkg of flatResolvedDeps.filter(pkg => pkg.depth === 0)) {
     await symlinkDependencyTo(pkg, opts.baseNodeModules)
@@ -77,7 +85,9 @@ export default async function (
       pkgId: pkg.id,
     })
   }
+  console.time('linkBins')
   await linkBins(opts.baseNodeModules, opts.bin)
+  console.timeEnd('linkBins')
 
   return pkgsToLink
 }

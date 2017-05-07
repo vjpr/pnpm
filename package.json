@@ -1,10 +1,10 @@
 {
-  "name": "pnpm",
+  "name": "pnpmv",
   "description": "Fast, disk space efficient npm installs",
   "version": "0.66.2",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "bin": {
-    "pnpm": "lib/bin/pnpm.js"
+    "pnpmv": "lib/bin/pnpm.js"
   },
   "bugs": {
     "url": "https://github.com/pnpm/pnpm/issues"
@@ -18,6 +18,7 @@
     "@types/byline": "^4.2.31",
     "@types/common-tags": "^1.2.5",
     "@types/load-json-file": "^2.0.5",
+    "@types/lodash": "^4.14.63",
     "@types/mz": "^0.0.31",
     "@types/node": "^7.0.5",
     "@types/nopt": "^3.0.29",
@@ -45,6 +46,7 @@
     "link-dir": "^2.0.0",
     "load-json-file": "^2.0.0",
     "load-yaml-file": "^0.1.0",
+    "lodash": "^4.17.4",
     "loud-rejection": "^1.6.0",
     "mem": "^1.1.0",
     "mkdirp-promise": "^5.0.1",

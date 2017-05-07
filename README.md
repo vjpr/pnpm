@@ -1,3 +1,7 @@
+# vjpr's fork
+
+This will be kept up to date with the origin/master and used to add debugging statements. Runnable with `pnpmv`.
+
 # pnpm
 
 [![Status](https://travis-ci.org/pnpm/pnpm.svg?branch=master)](https://travis-ci.org/pnpm/pnpm "See test builds")

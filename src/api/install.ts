@@ -211,6 +211,8 @@ async function installInContext (
     nodeModules: nodeModulesPath,
     update: opts.update,
   }
+  console.log('installing start')
+  console.time('installing')
   const nonLinkedPkgs = await pFilter(packagesToInstall, (spec: PackageSpec) => !spec.name || safeIsInnerLink(nodeModulesPath, spec.name))
   const pkgs: InstalledPackage[] = await installMultiple(
     installCtx,
@@ -218,6 +220,10 @@ async function installInContext (
     optionalDependencies,
     installOpts
   )
+  console.timeEnd('installing')
+
+  console.log('linking start')
+  console.time('linking')
   const linkedPkgsMap = await linkPackages(pkgs, installCtx.installs, {
     force: opts.force,
     global: opts.global,
@@ -230,6 +236,7 @@ async function installInContext (
           })), newPkgs), nodeModulesPath)
       : [],
   })
+  console.timeEnd('linking')
 
   let newPkg: Package | undefined = ctx.pkg
   if (installType === 'named') {

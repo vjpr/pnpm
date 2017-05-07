@@ -5,6 +5,10 @@ import semver = require('semver')
 import logger from 'pnpm-logger'
 import path = require('path')
 
+// Speed-up hack.
+import {assign, includes, some, partialRight, find, fromPairs} from 'lodash'
+R.merge = assign
+
 export type DependencyTreeNode = {
   name: string,
   hasBundledDependencies: boolean,
@@ -109,6 +113,19 @@ function getNonCircularDependencies (
 ) {
   const relations = R.aperture(2, keypath)
   const isCircular = R.partialRight(R.contains, [relations])
+  // // const isCircular = partialRight(includes, [relations])
+  // // console.log({relations})
+  // // const isCircular = (ids: Array<any>) => {
+  // //   // console.log({ids})
+  // //   return find(relations, (el: any) => {
+  // //     return ids.toString() == el.toString()
+  // //   })
+  // // }
+  //
+  // const pairs = fromPairs(relations)
+  // const isCircular = (ids: Array<any>) => {
+  //   return pairs[ids[0]] == ids[1]
+  // }
   return dependencyIds.filter(depId => !isCircular([parentId, depId]))
 }
 
